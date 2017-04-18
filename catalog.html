@@ -34,25 +34,25 @@
 			<form class="main-left" action="#" method="post">
 				<h4>Стоимость:</h4>
 				<div class="range">
-					<span class="bull  bull-left"></span>
-					<span class="bull  bull-right"></span>
+					<span class="bul  bul--left"></span>
+					<span class="bul  bul--right"></span>
 				</div>
-				<label class="slide-text>
+				<label class="slide-text">
 					От <input type="text" name="from" placeholder="0">
 				</label>
-				<label class="slide-text>
+				<label class="slide-text">
 					До <input type="text" name="to" placeholder="15000">
 				</label>
 				<h4>Сетка:</h4>
-				<label class="radio"><input type="radio">Адаптивная</label>
-				<label class="radio"><input type="radio">Фиксированная</label>
-				<label class="radio"><input type="radio">Резиновая</label>
+				<input type="radio" name="adaptive" id="adapt-field"><label for="adapt-field">Адаптивная</label>
+				<input type="radio" name="fixed" id="fix-field"><label for="fix-field">Фиксированная</label>
+				<input type="radio" name="elastic" id="elast-field"><label for="elast-field">Резиновая</label>
 				<h4>Особенности:</h4>
-				<label class="checkbox"><input type="checkbox" checked>Слайдер</label>
-				<label class="checkbox"><input type="checkbox">Блок преимуществ</label>
-				<label class="checkbox"><input type="checkbox" checked>Новости</label>
-				<label class="checkbox"><input type="checkbox">Галерея</label>
-				<label class="checkbox"><input type="checkbox">Корзина</label>
+				<input type="checkbox" name="slider" id="slide-field"><label for="slide-field">Слайдер</label>
+				<input type="checkbox" name="privilege" id="priv-field"><label for="priv-field">Блок преимуществ</label>
+				<input type="checkbox" name="news" id="news-field"><label for="news-field">Новости</label>
+				<input type="checkbox" name="gallery" id="gallery-field"><label for="gallery-field">Галерея</label>
+				<input type="checkbox" name="basket" id="basket-field"><label for="basket-field">Корзина</label>
 				<button>Показать</button>
 			</form>
 			<div class="main-right">
@@ -73,7 +73,7 @@
 							<span></span>
 							<span></span>
 						</div>
-						<img src="http://placehold.it/150x100" alt="Sedona"Ю
+						<img src="http://placehold.it/150x100" alt="Sedona">
 						<div class="catalog over">
 							<b>Sedona</b>
 							<p>Информационный сайт для туристов</p>
@@ -88,9 +88,9 @@
 						</div>
 						<img src="http://placehold.it/150x100" alt="Pink">
 						<div class="catalog over">
-							<b>текст</b>
-							<p>текст</p>
-							<a href="#" class="btn catalog-btn"> руб.</a>
+							<b>Pink app</b>
+							<p>Продуктовый лендинг приложения для iOS и Android</p>
+							<a href="#" class="btn catalog-btn">9 900 руб.</a>
 						</div>
 					</li>
 					<li>
@@ -101,9 +101,9 @@
 						</div>
 						<img src="http://placehold.it/150x100" alt="Barbershop">
 						<div class="catalog over">
-							<b>текст</b>
-							<p>текст</p>
-							<a href="#" class="btn catalog-btn"> руб.</a>
+							<b>Barbershop</b>
+							<p>Сайт салона красоты. <br>Для мужчин, да.</p>
+							<a href="#" class="btn catalog-btn">9 900 руб.</a>
 						</div>
 					</li>
 					<li>
@@ -112,11 +112,11 @@
 							<span></span>
 							<span></span>
 						</div>
-						<img src="http://placehold.it/150x100" alt="Mishki">
+						<img src="http://placehold.it/150x100" alt="Mishka">
 						<div class="catalog over">
-							<b>текст</b>
-							<p>текст</p>
-							<a href="#" class="btn catalog-btn"> руб.</a>
+							<b>Mishka</b>
+							<p>Интернет-магазин вязаных игрушек</p>
+							<a href="#" class="btn catalog-btn">9 900 руб.</a>
 						</div>
 					</li>
 					<li>
@@ -125,11 +125,11 @@
 							<span></span>
 							<span></span>
 						</div>
-						<img src="http://placehold.it/150x100" alt="Обучение A+">
+						<img src="http://placehold.it/150x100" alt="A+">
 						<div class="catalog over">
-							<b>текст</b>
-							<p>текст</p>
-							<a href="#" class="btn catalog-btn"> руб.</a>
+							<b>A plus</b>
+							<p>Лендинг курсов повышения квалификации</p>
+							<a href="#" class="btn catalog-btn">9 900 руб.</a>
 						</div>
 					</li>
 					<li>
@@ -140,9 +140,9 @@
 						</div>
 						<img src="http://placehold.it/150x100" alt="Кваст">
 						<div class="catalog over">
-							<b>текст</b>
-							<p>текст</p>
-							<a href="#" class="btn catalog-btn"> руб.</a>
+							<b>Кваст</b>
+							<p>Промо-сайт производителя крафтового кваса</p>
+							<a href="#" class="btn catalog-btn">9 900 руб.</a>
 						</div>
 					</li>
 				</ul>
@@ -159,8 +159,8 @@
 			</div>
 			<div class="address">
 				<h3>NЁRDS DESIGN STUDIO</h3>
-				<address>191186, Санкт-Петербург, ул. Б.Конюшенная, д. 19/8</address>
-				<p>тел. +7 (812) 275-75-75</p>
+				<address>191186, Санкт-Петербург, <br>ул. Б.Конюшенная, д. 19/8</address>
+				<a href="tel:+78122757575">тел. +7 (812) 275-75-75</a>
 				<a class="btn" href="#">Напишите нам</a>
 			</div>
 		<footer class="footer">
