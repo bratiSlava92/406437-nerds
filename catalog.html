@@ -23,7 +23,7 @@
 			</div>
 			<h1 class="title-catalog">Магазин готовых шаблонов</h1>
 		</header>
-		<main class="main-container clear">
+		<main class="main-container clearfix">
 			<form class="main-catalog-left" action="#" method="post">
 				<h4>Стоимость:</h4>
 				<div class="range">
@@ -38,9 +38,9 @@
 				</label>
 				<div class="radio">
 					<h4>Сетка:</h4>
-					<input type="radio" name="adaptive" id="adapt-field" checked><label for="adapt-field">Адаптивная</label>
-					<input type="radio" name="fixed" id="fix-field"><label for="fix-field">Фиксированная</label>
-					<input type="radio" name="elastic" id="elast-field"><label for="elast-field">Резиновая</label>
+					<input type="radio" name="netting" id="adapt-field" checked><label for="adapt-field">Адаптивная</label>
+					<input type="radio" name="netting" id="fix-field"><label for="fix-field">Фиксированная</label>
+					<input type="radio" name="netting" id="elast-field"><label for="elast-field">Резиновая</label>
 				</div>
 				<div class="checkbox">
 					<h4>Особенности:</h4>
@@ -56,11 +56,11 @@
 				<div class="sort clear">
 					<h4 class="main-left">Сортировать:</h4>
 					<div class="main-right">
-						<a href="#">По цене</a>
+						<a class="active" href="#">По цене</a>
 						<a class="opacity" href="#">По типу</a>
 						<a class="opacity" href="#">По названию</a>
-						<a href="#" class="arrow"><img src="img/sort-down.png" width="9" height="9" alt="По убыванию">
-						<a href="#" class="arrow"><img src="img/sort-up.png" width="9" height="9" alt="По возрастанию">
+						<a class="active" class="arrow" href="#" ><img src="img/sort-down.png" width="9" height="9" alt="По убыванию"></a>
+						<a class="arrow" href="#" ><img src="img/sort-up.png" width="9" height="9" alt="По возрастанию"></a>
 					</div>
 				</div>
 				<ul class="catalog">
@@ -70,7 +70,7 @@
 							<span></span>
 							<span></span>
 						</div>
-						<img src="img/sedona.jpg" width="360" height="576" alt="Sedona">
+						<img src="img/sedona.jpg" width="358" height="576" alt="Sedona">
 <!--						<div class="catalog-over">
 							<b>Sedona</b>
 							<p>Информационный сайт для туристов</p>
@@ -83,7 +83,7 @@
 							<span></span>
 							<span></span>
 						</div>
-						<img src="img/pink.jpg" width="360" height="576" alt="Pink">
+						<img src="img/pink.jpg" width="358" height="576" alt="Pink">
 <!--						<div class="catalog-over">
 							<b>Pink app</b>
 							<p>Продуктовый лендинг приложения для iOS и Android</p>
@@ -96,7 +96,7 @@
 							<span></span>
 							<span></span>
 						</div>
-						<img src="img/barber.jpg" width="360" height="576" alt="Barbershop">
+						<img src="img/barber.jpg" width="358" height="576" alt="Barbershop">
 <!--						<div class="catalog-over">
 							<b>Barbershop</b>
 							<p>Сайт салона красоты. <br>Для мужчин, да.</p>
@@ -109,7 +109,7 @@
 							<span></span>
 							<span></span>
 						</div>
-						<img src="img/mishka.jpg" width="360" height="576" alt="Mishka">
+						<img src="img/mishka.jpg" width="358" height="576" alt="Mishka">
 <!--						<div class="catalog-over">
 							<b>Mishka</b>
 							<p>Интернет-магазин вязаных игрушек</p>
@@ -122,7 +122,7 @@
 							<span></span>
 							<span></span>
 						</div>
-						<img src="img/aplus.jpg" width="360" height="576" alt="A+">
+						<img src="img/aplus.jpg" width="358" height="576" alt="A+">
 <!--						<div class="catalog-over">
 							<b>A plus</b>
 							<p>Лендинг курсов повышения квалификации</p>
@@ -135,7 +135,7 @@
 							<span></span>
 							<span></span>
 						</div> 
-						<img src="img/kvast.jpg" width="360" height="576" alt="Кваст">
+						<img src="img/kvast.jpg" width="358" height="576" alt="Кваст">
 <!--						<div class="catalog-over">
 							<b>Кваст</b>
 							<p>Промо-сайт производителя крафтового кваса</p>
@@ -144,7 +144,7 @@
 					</li>
 				</ul>
 				<ul class="navigation">
-					<li><a href="#">1</a>
+					<li class="active"><a href="#">1</a>
 					<li><a href="#">2</a>
 					<li><a href="#">3</a>
 					<li><a class="next" href="#">Следующая</a>
@@ -153,12 +153,12 @@
 		</main> 
 		<div class="map">
 			<img src="img/map.jpg" width="100%" height="416" alt="Карта">
-		</div>
-		<div class="address">
-			<h3>NЁRDS DESIGN STUDIO</h3>
-			<address>191186, Санкт-Петербург, <br>ул. Б.Конюшенная, д. 19/8</address>
-			<a class="phone" href="tel:+78122757575">тел. +7 (812) 275-75-75</a>
-			<a class="btn" href="#">Напишите нам</a>
+			<div class="address">
+				<h3>NЁRDS DESIGN STUDIO</h3>
+				<address>191186, Санкт-Петербург, <br>ул. Б.Конюшенная, д. 19/8</address>
+				<a class="phone" href="tel:+78122757575">тел. +7 (812) 275-75-75</a>
+				<a class="btn" href="#">Напишите нам</a>
+			</div>
 		</div>
 		<footer class="footer">
 			<div class="main clear">
