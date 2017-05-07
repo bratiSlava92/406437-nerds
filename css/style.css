@@ -106,8 +106,7 @@ p {
 	width: 520px;
 	list-style-type: none;
 }
-
-.switch .slider-controls {
+.slider-controls {
 	position: absolute;
 	z-index: 3;
 	bottom: 96px;
@@ -115,7 +114,7 @@ p {
 	text-align: center;
 	width: 130px;
 } 
-.switch  input[type="radio"] {
+.slider input[type="radio"] {
 	display: none;
 }
 .slider-controls label {
@@ -129,39 +128,40 @@ p {
 	border: 5px solid white;
   cursor: pointer;
 }
-#btn1:checked ~ .slider-controls label[for="btn1"],
-#btn2:checked ~ .slider-controls label[for="btn2"],
-#btn3:checked ~ .slider-controls label[for="btn3"] {
+#btn1:checked ~ .slider-controls .label-btn1,
+#btn2:checked ~ .slider-controls .label-btn2,
+#btn3:checked ~ .slider-controls .label-btn3 {
 	box-shadow: inset 0 0 0 2px #c1c1c1;
 }
-.slide:nth-child(1) {
+.slide1 {
 	background: url(../img/slide1.png) no-repeat;
 	background-position: 94% 100%;
 }
-.slide:nth-child(2) {
+.slide2 {
 	background: url(../img/slide2.png) no-repeat;
 	background-position: 100% 100%;
 }
-.slide:nth-child(3) {
+.slide3 {
 	background: url(../img/slide3.png) no-repeat;
 	background-position: 100% 100%;
 }
 .slide {
 	display: none;
 }
-#btn1:checked ~ .slides .slide:nth-child(1) {
+#btn1:checked ~ .slides .slide1 {
 	display: block;
 }
-#btn2:checked ~ .slides .slide:nth-child(2) {
+#btn2:checked ~ .slides .slide2 {
 	display: block;
 }
-#btn3:checked ~ .slides .slide:nth-child(3) {
+#btn3:checked ~ .slides .slide3 {
 	display: block;
 }
 .header-title {
 	font-weight: 500;
 	font-size: 55px;
 	line-height: 55px;
+	margin: 0;
 	margin-top: 64px;
 }
 .txt {
