@@ -42,7 +42,6 @@ p {
   clear: both;
 }
 .header {
-	position: relative;
 	background-color: #eeeeee;
 }
 .top-nav {
@@ -88,49 +87,81 @@ p {
 	margin-left: 198px;
 }
 .slider {
+	position:relative;
 	width: 1160px;
+	height: 430px;
 	margin: 0 auto;
-	padding: 0 20px;
-}
-.slide-text1 {
-	float: left;
-	width: 1129px;
-	min-height: 431px;
-	list-style-type: none;
 	padding: 0;
-	margin: 0;
-	background: url(../img/slide1.png) right no-repeat;
 }
-
-.slide-text2, .slide-text3 {
-	float: left;
-	width: 1160px;
-	list-style-type: none;
-	padding: 0;
-	margin: 0;
-}
-.slide-text2 {
-	background: url(../img/slide2.png) right no-repeat;
-}
-.slide-text3 {
-	background: url(../img/slide3.png) right no-repeat;
-}
-.clearfix:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-.switch {
+.slide {
 	position: absolute;
-	bottom: 96px;
-	left: 50%;
-	text-align: center;
+	z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
-
+.slide-text {
+	width: 520px;
+	list-style-type: none;
+}
+.slider-controls {
+	position: absolute;
+	z-index: 3;
+	bottom: 96px;
+	left: 528px;
+	text-align: center;
+	width: 130px;
+} 
+.slider input[type="radio"] {
+	display: none;
+}
+.slider-controls label {
+	display: inline-block;
+	vertical-align: top;
+	width: 8px;
+	height: 8px;
+	margin-right: 15px;
+	border-radius: 50%;
+	background: #ffffff;
+	border: 5px solid white;
+  cursor: pointer;
+}
+#btn1:checked ~ .slider-controls .label-btn1,
+#btn2:checked ~ .slider-controls .label-btn2,
+#btn3:checked ~ .slider-controls .label-btn3 {
+	box-shadow: inset 0 0 0 2px #c1c1c1;
+}
+.slide1 {
+	background: url(../img/slide1.png) no-repeat;
+	background-position: 94% 100%;
+}
+.slide2 {
+	background: url(../img/slide2.png) no-repeat;
+	background-position: 100% 100%;
+}
+.slide3 {
+	background: url(../img/slide3.png) no-repeat;
+	background-position: 100% 100%;
+}
+.slide {
+	display: none;
+}
+#btn1:checked ~ .slides .slide1 {
+	display: block;
+}
+#btn2:checked ~ .slides .slide2 {
+	display: block;
+}
+#btn3:checked ~ .slides .slide3 {
+	display: block;
+}
 .header-title {
-	font-weight: 400;
+	font-weight: 500;
 	font-size: 55px;
 	line-height: 55px;
+	margin: 0;
 	margin-top: 64px;
 }
 .txt {
@@ -317,6 +348,30 @@ strong {
 	margin-top: 52px;
 	margin-bottom: 44px;
 }
+.partners {
+	position: relative;
+}
+.partner1::after, 
+.partner2::after, 
+.partner3::after {
+	position: absolute;
+	top: 66px;
+	content: "";
+	display: block;
+	width: 2px;
+	height: 52px;
+	background-color: #eeeeee;
+}
+.partner1::after {
+	left: 280px;
+}
+.partner2::after {
+	left: 580px;
+}
+.partner3::after {
+	right: 280px;
+}
+
 .partner1:hover, .partner2:hover, .partner3:hover, .partner4:hover {
 	opacity: 1;
 }
@@ -344,7 +399,9 @@ strong {
 	padding: 0 20px;
 }
 .map hr {
+	margin: auto;
 	margin-top: 0;
+	width: 1160px;
 }
 .address {
 	position: relative;
@@ -624,10 +681,9 @@ h4 {
 }
 .main-catalog-left .slide-text {
 	display: inline-block;
-	padding: 0;
-	margin: 0;
+	vertical-align: top;
 	margin-top: 14px;
-	width: 112px;
+	width: 113px;
 	height: 38px;
 	font-size: 16px;
 	line-height: 22px;
@@ -635,9 +691,11 @@ h4 {
 	text-transform: uppercase;
 	color: #283136;
 }
+
 .slide-text input {
 	padding: 0;
 	margin: 0;
+	margin-left: 6px;
 	width: 80px;
 	height: 38px;
 	background-color: #eeeeee;
@@ -646,6 +704,9 @@ h4 {
 	font-size: 16px;
 	line-height: 22px;
 	text-align: center;
+}
+.max-price {
+	margin-left: 30px;
 }
 .radio {
 	position: relative;
@@ -809,6 +870,9 @@ button:active,
 	background-color: #4d4d4d;
 	box-shadow: 0 3px 20px -1px #cfcfcf;
 } 
+.catalog li:hover .catalog-over {
+	z-index: 6;
+} 
 .catalog li:nth-child(even) {
 	margin-right: 0;
 } 
@@ -828,12 +892,19 @@ button:active,
 .catalog-header span:nth-last-child(3) {
 	margin-left: 16px;
 }
+.catalog img {
+	position: relative;
+	z-index: 5;
+}
 .catalog-over {
+	position: relative;
+	z-index: 4;
+	bottom: 232px;
 	float: left;
 	padding: 0;
 	margin: 0;
-	width: 362px;
-	height: 231px;
+	width: 358px;
+	height: 229px;
 	background-color: #e9e9e9;
 	vertical-align: middle;
 	text-align: center;
