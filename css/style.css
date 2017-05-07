@@ -398,6 +398,7 @@ hr .partner {
 	position: relative;
 	z-index: 1;
 	background-size: cover;
+	width: 100%;
 	min-height: 416px;
 }
 .address, .pop-up {
