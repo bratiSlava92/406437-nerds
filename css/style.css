@@ -710,7 +710,7 @@ h4 {
   height: 38px;
   font-size: 16px;
   line-height: 22px;
-  font-weight: 500;
+  font-weight: 400;
   text-transform: uppercase;
   color: #283136;
 }
@@ -755,6 +755,7 @@ h4 {
 .checkbox input[type="checkbox"] + label::before, .radio input[type="radio"] + label::before {
   content: "";
   position: absolute;
+	top: -2px;
   left: 0;
   background-repeat: no-repeat;
   width: 27px;
@@ -762,13 +763,13 @@ h4 {
   opacity: 0.4;
 }
 .checkbox input[type="checkbox"] + label, .radio input[type="radio"] + label {
+  position: relative;
   display: block;
   margin-top: 15px;
   padding-left: 36px;
   font-size: 16px;
   line-height: 20px;
   text-align: left;
-  width: 25x;
   height: 25px;
   color: #283136;
   cursor: pointer;
@@ -805,6 +806,8 @@ button {
   border-radius: 2px;
   background-color: #eeeeee;
   color: #000000;
+  font-family: "Roboto", "Arial", sans-serif;
+  font-weight: 500;
   font-size: 16px;
   text-transform: uppercase;
   text-decoration: none;
