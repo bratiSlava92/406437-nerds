@@ -359,26 +359,13 @@ body {
   position: relative;
   border-top: 2px solid #eeeeee;
   border-bottom: 2px solid #eeeeee;
-}/*
-.partner1::after,
-.partner2::after, 
-.partner3::after {
-  position: absolute;
-  top: 66px;
-  content: url(../img/border.png);
-  display: block;
-	margin: 0;
-	padding: 0;
-  width: 2px;
-  height: 52px;
-}*/
+}
 .partner1::after, 
 .partner2::after, 
 .partner3::after {
-  position: absolute;
-  top: 66px;
   content: "";
-  display: block;
+	position: absolute;
+  top: 66px;
   width: 2px;
   height: 52px;
   background-color: #eeeeee;
@@ -390,7 +377,7 @@ body {
   left: 580px;
 }
 .partner3::after {
-  right: 280px;
+  left: 880px;
 }
 
 .partner1:hover img, 
