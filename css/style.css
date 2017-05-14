@@ -2,7 +2,9 @@ body {
   margin: 0;
   font-family: "Roboto", "Arial", sans-serif;
 }
-p {
+.header p,
+.main-container p,
+.footer p {
   color: #283136;
   font-size: 16px;
   line-height: 24px;
@@ -42,6 +44,7 @@ p {
   clear: both;
 }
 .header {
+	min-width: 1440px;
   background-color: #eeeeee;
 }
 .top-nav {
@@ -258,7 +261,7 @@ p {
   margin-top: 31px;
   margin-bottom: 39px;
 }
-strong {
+.presentation strong {
   margin: 0;
   font-size: 16px;
   line-height: 24px;
@@ -310,7 +313,7 @@ strong {
   font-size: 45px;
   line-height: 10px;
 }
-b sup {
+.main-right sup {
   font-size: 28px;
 }
 .main-right p {
@@ -321,7 +324,6 @@ b sup {
 .partner1 {
   float: left;
   width: 200px;
-  opacity: 0.2;
   margin-left: 30px;
   margin-top: 62px;
   margin-bottom: 45px;
@@ -329,7 +331,6 @@ b sup {
 .partner2 {
   float: left;
   width: 208px;
-  opacity: 0.2;
   margin-left: 96px;
   margin-top: 46px;
   margin-bottom: 39px;
@@ -337,7 +338,6 @@ b sup {
 .partner3 {
   float: left;
   width: 185px;
-  opacity: 0.2;
   margin-left: 103px;
   margin-top: 65px;
   margin-bottom: 58px;
@@ -345,16 +345,33 @@ b sup {
 .partner4 {
   float: left;
   width: 174px;
-  opacity: 0.2;
   margin-left: 121px;
   margin-top: 52px;
   margin-bottom: 39px;
+}
+.partner1 img,
+.partner2 img,
+.partner3 img,
+.partner4 img {
+  opacity: 0.2;
 }
 .partners {
   position: relative;
   border-top: 2px solid #eeeeee;
   border-bottom: 2px solid #eeeeee;
-}
+}/*
+.partner1::after,
+.partner2::after, 
+.partner3::after {
+  position: absolute;
+  top: 66px;
+  content: url(../img/border.png);
+  display: block;
+	margin: 0;
+	padding: 0;
+  width: 2px;
+  height: 52px;
+}*/
 .partner1::after, 
 .partner2::after, 
 .partner3::after {
@@ -376,13 +393,18 @@ b sup {
   right: 280px;
 }
 
-.partner1:hover, .partner2:hover, .partner3:hover, .partner4:hover {
+.partner1:hover img, 
+.partner2:hover img, 
+.partner3:hover img, 
+.partner4:hover img {
   opacity: 1;
 }
-.partner1:active, .partner2:active, .partner3:active, .partner4:active {
+.partner1:active img, 
+.partner2:active img, 
+.partner3:active img, 
+.partner4:active img {
   opacity: 0.1;
 }
-
 .map {
   height: 416px;
   margin-top: 80px;
@@ -391,9 +413,16 @@ b sup {
   position: relative;
   z-index: 1;
   background-size: cover;
-  width: 100%;
+  min-width: 100%;
   min-height: 416px;
   background: url(../img/map.jpg) center no-repeat;
+}
+.address-container {
+  position: relative;
+	bottom: 366px;
+  width: 1160px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 .address, .pop-up {
   width: 1160px;
@@ -403,8 +432,7 @@ b sup {
 .address {
   position: relative;
   z-index: 2;
-  bottom: 366px;
-  right: 421px;
+	margin: 0;
   padding: 0;
   display: block;
   width: 319px;
@@ -418,7 +446,7 @@ b sup {
   font-size: 18px;
   line-height: 30px;
 }
-address {
+.map address {
   margin: 0;
   margin-top: 22px;
   margin-bottom: 18px;
@@ -451,6 +479,7 @@ address {
   width: 859px;
   min-height: 590px;
   padding-left: 101px;
+  padding-bottom: 44px;
   box-shadow: 0 15px 50px 0 #595a5a;
   background-color: #ffffff;
 }
@@ -485,9 +514,9 @@ address {
   position: absolute;
   top: 77px;
   right: 90px;
-  background: url(../img/close-cross.png) right no-repeat;
-  width: 21px;
-  height: 21px;
+  background: url(../img/sprite.png) no-repeat 0 0;
+  width: 22px;
+  height: 22px;
   opacity: 0.3;
 }
 .pop-up span:hover {
@@ -517,7 +546,7 @@ address {
 .pop-up input {
   padding: 0;
   margin-top: 13px;
-  width: 356px;
+  width: 342px;
   height: 46px;
   border: 2px solid #d7dcde;
   border-radius: 2px;
@@ -526,6 +555,9 @@ address {
   line-height: 18px;
   color: rgba(68, 68, 68, 0.5);
   margin-bottom: 36px;
+}
+.pop-up input[type="submit"] {
+  margin-top: 42px;
 }
 .pop-up input[type="text"]:hover, 
 .form-center textarea:hover {
@@ -547,15 +579,18 @@ address {
 }
 .form-center textarea {
   font-family: "Roboto", "Arial", sans-serif;
-  margin-top: 25px;
-  width: 756px;
-  border: 2px solid #ffffff;
+  margin-top: 10px;
+  padding: 0;
+  padding-top: 11px;
+  padding-left: 14px;
+  width: 738px;
+	min-height: 103px;
+  border: 2px solid #d7dcde;
   border-radius: 2px;
   font-size: 16px;
   line-height: 18px;
   color: #a8a8a8;
-  padding-left: 14px;
-  margin-bottom: 20px;
+  
 }
 .pop-up .btn {
   border: none;
@@ -563,7 +598,6 @@ address {
   height: 50px;
   color: #ffffff;
   text-align: center;
-  margin-bottom: 82px;
 }
 .pop-up .btn:active {
   outline: none;
@@ -575,6 +609,10 @@ address {
   height: 217px;
   margin: 0 auto;
   padding: 0 20px;
+}
+.social span {
+	display: block;
+  visibility: hidden;
 }
 .social-vk, .social-fb, .social-inst {
   float: left;
@@ -620,7 +658,7 @@ address {
   padding-top: 28px;
 }
 .social-inst img {
-  padding-top: 30px;
+  padding-top: 29px;
 }
 
 /* Страница catalog.html */
@@ -651,7 +689,7 @@ address {
   margin-top: 58px;
   width: 760px;
 }
-h4 {
+.main-container h4 {
   margin: 0;
   margin-bottom: 22px;
   font-size: 18px;
@@ -776,16 +814,24 @@ h4 {
 }
 
 .radio input[type="radio"] + label::before {
-  background-image: url(../img/radio-off.png);
+  background: url(../img/sprite.png) no-repeat -52px 0;
+  width: 25px;
+  height: 25px;
  }
 .radio input[type="radio"]:checked + label::before {
-  background-image: url(../img/radio-on.png);
+  background: url(../img/sprite.png) no-repeat -25px 0;
+  width: 25px;
+  height: 25px;
  }
 .checkbox input[type="checkbox"] + label::before {
-  background-image: url(../img/checkbox-off.png);
+  background: url(../img/sprite.png) no-repeat -110px 0;
+  width: 23px;
+  height: 23px;
 }
 .checkbox input[type="checkbox"]:checked + label::before {
-  background-image: url(../img/checkbox-on.png);
+  background: url(../img/sprite.png) no-repeat -79px 0;
+  width: 27px;
+  height: 23px;
 }
 .checkbox input[type="checkbox"] + label:hover, 
 .radio input[type="radio"] + label:hover,
@@ -800,7 +846,7 @@ h4 {
   color: #283136;
   opacity: 0.3;
 }
-button {
+.main-catalog-left button {
   display: block;
   border: none;
   border-radius: 2px;
@@ -816,12 +862,12 @@ button {
   padding: 16px 88px;
   margin-top: 44px;
 }
-button:hover,
+.main-catalog-left button:hover,
 .navigation li:hover,
-li .next:hover {
+.navigation .next:hover {
   background-color: #dfdfdf;
 }
-button:active,
+.main-catalog-left button:active,
 .navigation li:active,
 .navigation li:nth-child(4):active {
   outline: none;
@@ -830,7 +876,7 @@ button:active,
   border-top: 3px solid #bfbfbf;
   padding-top: 16px;
 }
-button:active {
+.main-catalog-left button:active {
   padding-top: 13.5px;
 }
 .sort .main-left {
@@ -841,6 +887,7 @@ button:active {
 }
 .sort .main-right {
   display: inline-block;
+	vertical-align: center;
 }
 .sort a {
   margin-right: 23px;
@@ -867,7 +914,13 @@ button:active {
   opacity: 0.3;
 }
 .arrow {
-  margin-left: 18px;
+  margin-left: 17px;
+}
+.arrow span {
+  visibility: hidden;
+  width: 1px;
+  font-size: 1px;
+  writing-mode: tb-rl;
 }
 .main-catalog-right img {
   margin: 0;
@@ -895,9 +948,11 @@ button:active {
   border: 1px solid #e9e9e9;
 }
 .catalog-header {
+	position: relative;
   width: 358px;
   height: 40px;
 }
+
 .catalog li:hover {
   background-color: #4d4d4d;
   box-shadow: 0 3px 20px -1px #cfcfcf;
@@ -907,21 +962,32 @@ button:active {
 } 
 .catalog li:nth-child(even) {
   margin-right: 0;
-} 
-
-.catalog-header span {
-  display: inline-block;
-	vertical-align: top;
-  margin-top: 12px;
-  margin-right: 6px;
+}
+.catalog-header span,
+.catalog-header span::before,
+.catalog-header span::after {
+  content: "";
+  display: block;
   border: 1px solid #ffffff;
-  border-radius: 7px;
+  border-radius: 50%;
   width: 12px;
   height: 12px;
   background: #ffffff;
+}
+.catalog-header span {
+  position:absolute;
+  top: 12px;
+  left: 16px;
 } 
-.catalog-header span:nth-last-child(3) {
-  margin-left: 16px;
+.catalog-header span::before {
+  position:absolute;
+  top: -0.5px;
+  left: 23px;
+}
+.catalog-header span::after {
+  position:absolute;
+  top: -0.5px;
+  left: 46px;
 }
 .catalog img {
   position: relative;
@@ -940,8 +1006,14 @@ button:active {
   vertical-align: middle;
   text-align: center;
 }
+.catalog-over a {
+  text-decoration: none;
+}
 .catalog-over b {
   display: block;
+	width: 116px;
+	margin: 0 122px;
+	color: #000000;
   font-size: 18px;
   line-height: 30px;
   text-transform: uppercase;
